@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinancialJuice Widget</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinancialJuice Economic Calendar</title>
 </head>
-<body style="background-color:#1e1e1e; color:#b2b5be; font-family:Arial, sans-serif;">
-    <!-- FinancialJuice Widget-->
-    <div id="financialjuice-eco-widget-container"></div>
+<body style="background-color:#0d1117; color:white; display:flex; justify-content:center; align-items:center; height:100vh;">
 
-    <!--Place this script after </body> -->
-    <script type="text/javascript">
-        var jo = document.createElement("script");
-        jo.type = "text/javascript";
-        jo.id= "FJ-Widgets";
-        var r = Math.floor(Math.random() * (9999 - 0 + 1) + 0);
-        jo.src = "https://feed.financialjuice.com/widgets/widgets.js?r=" + r + "";
-        jo.onload = function(){ 
-            var options = {};
-            options.container = "financialjuice-eco-widget-container";
-            options.mode = "table";
-            options.width= "700px";
-            options.height= "600px";
-            options.backColor= "252525";
-            options.fontColor= "b2b5be";
-            options.widgetType= "ECOCAL";
-            new window.FJWidgets.createWidget(options);
-        } 
-        document.getElementsByTagName("head")[0].appendChild(jo);
-    </script>
+  <!-- FinancialJuice Widget -->
+  <div id="financialjuice-eco-widget-container"></div>
+
+  <script type="text/javascript">
+    var jo = document.createElement("script");
+    jo.type = "text/javascript";
+    jo.id= "FJ-Widgets";
+    var r = Math.floor(Math.random() * (9999 - 0 + 1) + 0);
+    jo.src = "https://feed.financialjuice.com/widgets/widgets.js?r=" + r;
+    jo.onload = function(){ 
+      var options = {};
+      options.container = "financialjuice-eco-widget-container";
+      options.mode = "table";
+      options.width= "700px";
+      options.height= "600px";
+      options.backColor= "252525";
+      options.fontColor= "b2b5be";
+      options.widgetType= "ECOCAL";
+      new window.FJWidgets.createWidget(options);
+    } 
+    document.getElementsByTagName("head")[0].appendChild(jo);
+  </script>
+  <!-- End FinancialJuice Widget -->
+
 </body>
 </html>
